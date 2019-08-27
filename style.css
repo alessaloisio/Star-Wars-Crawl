@@ -5,11 +5,11 @@ body {
 }
 
 body {
-  background-image: url("fondetoile.jpg");
-  background-color: #000;
+  background: black url(fondetoile.jpg) repeat center center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   overflow: hidden;
+  animation: bg 30s linear infinite;
 }
 
 .scene1 {
@@ -103,5 +103,15 @@ body {
   0%,
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes bg {
+  0% {
+    /* background-image: none; */
+    background-position-y: 100%;
+  }
+  100% {
+    background-position-y: 0%;
   }
 }
