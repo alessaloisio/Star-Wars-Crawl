@@ -38,13 +38,10 @@ body {
 }
 
 .scene3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  perspective: 50vw;
+  min-width: 100%;
 
-  perspective: 700px;
-
-  color: #cb8b1d;
+  color: #fabb23;
   font-weight: bold;
   font-size: 100px;
   letter-spacing: 14px;
@@ -53,19 +50,19 @@ body {
 }
 
 .scene3 .crawl {
+  display: block;
   position: relative;
-  transform-origin: bottom center;
+  transform-origin: top center;
   animation: removeScene 17s linear, crawl 60s linear 17s;
-  top: 75vh;
-  min-width: 250%;
+  top: 100vh;
 }
 
 @keyframes scene1 {
   0% {
     opacity: 0;
   }
-  5%,
-  95% {
+  20%,
+  80% {
     opacity: 1;
     display: flex;
   }
@@ -76,21 +73,29 @@ body {
 
 @keyframes scene2 {
   0% {
+    opacity: 0;
     transform: scale(1);
   }
+  5% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
   100% {
+    opacity: 0;
     transform: scale(0);
   }
 }
 
 @keyframes crawl {
   0% {
-    transform: rotateX(50deg) translateZ(0);
+    transform: rotateX(45deg) translateZ(0);
   }
 
   100% {
     top: -2500px;
-    transform: rotateX(30deg) translateZ(-2500px);
+    transform: rotateX(45deg) translateZ(-2500px);
   }
 }
 
