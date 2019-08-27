@@ -5,5 +5,18 @@ body {
 }
 
 body {
-  background-color: #000;
+  background-image: url("fondetoile.jpg");
 }
+
+.scene2{
+  height: 100vh;
+  width: 100%;
+}
+.scene2 img{
+  height: 100%;
+  width: 100%;
+  animation: scene2 14s linear 7s;
+}
+@keyframes scene2{
+  0%   {transform: scale(1);}
+  100% {transform: scale(0);}
