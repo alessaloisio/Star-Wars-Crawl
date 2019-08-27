@@ -6,6 +6,74 @@ body {
 
 body {
   background-image: url("fondetoile.jpg");
+  background-color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+.scene1 {
+  color: #276980;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  font-size: 2rem;
+  animation: removeScene 1s linear 7s infinite, scene1 7s linear;
+}
+
+@keyframes scene1 {
+  0% {
+    opacity: 0;
+  }
+  5%,
+  95% {
+    opacity: 1;
+    display: flex;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes removeScene {
+  0%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.scene3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  perspective: 700px;
+
+  color: #cb8b1d;
+  font-weight: bold;
+  font-size: 100px;
+  letter-spacing: 14px;
+  text-align: justify;
+  line-height: 100px;
+}
+
+.scene3 .crawl {
+  position: relative;
+  transform-origin: bottom center;
+  animation: crawl 60s linear;
+  top: 75vh;
+  min-width: 250%;
+}
+@keyframes crawl {
+  0% {
+    transform: rotateX(50deg) translateZ(0);
+  }
+
+  100% {
+    top: -2500px;
+    transform: rotateX(30deg) translateZ(-2500px);
+  }
 }
 
 .scene2{
